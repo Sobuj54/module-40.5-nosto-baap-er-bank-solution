@@ -11,12 +11,16 @@
 
 document.getElementById("btn-withdraw").addEventListener("click", function () {
   const newWithdrawAmount = document.getElementById("withdraw-field").value;
+
   const previousWithdrawTotal =
     document.getElementById("withdraw-total").innerText;
   console.log(parseInt(previousWithdrawTotal));
+
   const newWithdrawTotal =
     parseInt(previousWithdrawTotal) + parseInt(newWithdrawAmount);
+
   document.getElementById("withdraw-total").innerText = newWithdrawTotal;
+
   const previousBalanceTotal = getTextElementValueById("balance-total");
   const newBalanceTotal = previousBalanceTotal - parseInt(newWithdrawAmount);
   console.log(newBalanceTotal);
